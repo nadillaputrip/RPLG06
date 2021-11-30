@@ -61,23 +61,6 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="searchButton">
-    <property name="geometry">
-     <rect>
-      <x>1320</x>
-      <y>30</y>
-      <width>30</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-image: url(:/logo/images/search.png);
-background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QPushButton" name="H_Homepage">
     <property name="geometry">
      <rect>
@@ -186,31 +169,6 @@ background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Forum Diskusi</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="searchBar">
-    <property name="geometry">
-     <rect>
-      <x>810</x>
-      <y>20</y>
-      <width>551</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Poppins</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 15px;
-padding-bottom:4px;
-padding-left:10px;</string>
-    </property>
-    <property name="placeholderText">
-     <string>Search here</string>
     </property>
    </widget>
    <widget class="QPushButton" name="tambahproduk">
@@ -548,25 +506,6 @@ padding-left:10px;
      <string>id Produk</string>
     </property>
    </widget>
-   <zorder>label</zorder>
-   <zorder>logoLM</zorder>
-   <zorder>H_Homepage</zorder>
-   <zorder>H_KatalogProduk</zorder>
-   <zorder>H_Konten</zorder>
-   <zorder>H_Event</zorder>
-   <zorder>H_ForumDiskusi</zorder>
-   <zorder>searchBar</zorder>
-   <zorder>searchButton</zorder>
-   <zorder>tambahproduk</zorder>
-   <zorder>tabelProduk</zorder>
-   <zorder>label_4</zorder>
-   <zorder>label_5</zorder>
-   <zorder>editButton</zorder>
-   <zorder>hapusButton</zorder>
-   <zorder>error</zorder>
-   <zorder>reloadButton</zorder>
-   <zorder>inputidProduk</zorder>
-   <zorder>Kategori_2</zorder>
   </widget>
  </widget>
  <resources>

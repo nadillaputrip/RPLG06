@@ -61,23 +61,6 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="searchButton">
-    <property name="geometry">
-     <rect>
-      <x>1320</x>
-      <y>30</y>
-      <width>30</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-image: url(:/logo/images/search.png);
-background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QPushButton" name="H_Homepage">
     <property name="geometry">
      <rect>
@@ -360,31 +343,6 @@ background-color:rgba(0,165,0,255);
     </property>
     <property name="text">
      <string>Unggah Produk</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="searchBar">
-    <property name="geometry">
-     <rect>
-      <x>810</x>
-      <y>20</y>
-      <width>551</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Poppins</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 15px;
-padding-bottom:4px;
-padding-left:10px;</string>
-    </property>
-    <property name="placeholderText">
-     <string>Search here</string>
     </property>
    </widget>
    <widget class="QLabel" name="Kategori_2">
@@ -683,35 +641,6 @@ color: red;</string>
      <string/>
     </property>
    </widget>
-   <zorder>label</zorder>
-   <zorder>logoLM</zorder>
-   <zorder>H_Homepage</zorder>
-   <zorder>H_KatalogProduk</zorder>
-   <zorder>H_Konten</zorder>
-   <zorder>H_Event</zorder>
-   <zorder>H_ForumDiskusi</zorder>
-   <zorder>label_2</zorder>
-   <zorder>label_3</zorder>
-   <zorder>Batch</zorder>
-   <zorder>inputNama</zorder>
-   <zorder>Kategori</zorder>
-   <zorder>inputBatch</zorder>
-   <zorder>unggahproduk</zorder>
-   <zorder>searchBar</zorder>
-   <zorder>searchButton</zorder>
-   <zorder>Kategori_2</zorder>
-   <zorder>inputKategori</zorder>
-   <zorder>inputHarga</zorder>
-   <zorder>Kategori_3</zorder>
-   <zorder>inputKuantitas</zorder>
-   <zorder>Kategori_4</zorder>
-   <zorder>inputBerat</zorder>
-   <zorder>Kategori_5</zorder>
-   <zorder>inputLink</zorder>
-   <zorder>Kategori_6</zorder>
-   <zorder>Kategori_8</zorder>
-   <zorder>inputDeskripsi</zorder>
-   <zorder>error</zorder>
   </widget>
  </widget>
  <resources>

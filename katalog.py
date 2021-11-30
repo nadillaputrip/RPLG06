@@ -17,7 +17,7 @@ class KatalogScreen(QDialog):
         #set gambar
         self.logoLM.setPixmap(QPixmap('./images/logo.jpeg'))
         self.logoLM.setScaledContents(True)
-        self.searchButton.setIcon(QIcon('./images/search.png'))
+        # self.searchButton.setIcon(QIcon('./images/search.png'))
 
         #redirect clicked button
         self.tambahproduk.clicked.connect(self.gotoadd)
@@ -214,7 +214,7 @@ class EditProdukScreen(QDialog):
         # set gambar
         self.logoLM.setPixmap(QPixmap('./images/logo.jpeg'))
         self.logoLM.setScaledContents(True)
-        self.searchButton.setIcon(QIcon('./images/search.png'))
+        # self.searchButton.setIcon(QIcon('./images/search.png'))
 
         # redirect clicked button
         self.editButton.clicked.connect(self.editProdukfunction)
@@ -269,7 +269,7 @@ class AddProdukScreen(QDialog):
         # set gambar
         self.logoLM.setPixmap(QPixmap('./images/logo.jpeg'))
         self.logoLM.setScaledContents(True)
-        self.searchButton.setIcon(QIcon('./images/search.png'))
+        # self.searchButton.setIcon(QIcon('./images/search.png'))
 
         # redirect clicked button
         self.unggahproduk.clicked.connect(self.addProdukFunction)

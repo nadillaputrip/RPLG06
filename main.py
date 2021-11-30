@@ -8,7 +8,49 @@ from PyQt5.QtGui import QPixmap,QIcon
 from config import config
 import psycopg2
 
+class LoginScreen(QDialog):
+    
+    def __init__(self):
+        super(LoginScreen, self).__init__()
+        loadUi("login.ui",self)
+        #logoLM.setPixmap(pixmap.scaled(myWidth, myHeight, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+        self.logoLM.setPixmap(QPixmap('./images/logo.jpeg'))
+        self.logoLM.setScaledContents(True)
+        self.passwordField.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.loginButton.clicked.connect(self.loginfunction)
 
+    def loginfunction(self):
+        user = self.usernameField.text()
+        password = self.passwordField.text()
+
+        if len(user)==0 or len(password)==0:
+            self.error.setText("Please input all fields.")
+
+        else:
+            conn = None
+            params = config()
+            conn = psycopg2.connect(**params)
+            cur = conn.cursor()
+            query = 'SELECT password FROM admin WHERE username =\''+user+"\'"
+            cur.execute(query)
+            rowChecked = cur.rowcount
+            # apabila username/ password ga ada
+            if rowChecked == 1:
+                result_pass = cur.fetchone()[0]
+                if result_pass == password:
+                    print("Successfully logged in.")
+                    self.gotoKatalogProduk()
+                    # self.error.setText(result_pass)
+
+                else:
+                    self.error.setText("Invalid username or password")
+            else:
+                self.error.setText("Invalid username or password")
+    def gotoKatalogProduk(self):
+        katalogProduk = KatalogScreen()
+        widget.addWidget(katalogProduk)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+            
 class KatalogScreen(QDialog):
     def __init__(self):
         super(KatalogScreen, self).__init__()
@@ -27,7 +69,7 @@ class KatalogScreen(QDialog):
         self.showProdukfunction()
 
         # apabila klik yang sidebar
-        self.H_Homepage.clicked.connect(self.gotoHomepage)
+        self.H_Logout.clicked.connect(self.gotoLogin)
         self.H_Event.clicked.connect(self.gotoEvent)
         self.H_Konten.clicked.connect(self.gotoKonten)
         self.H_ForumDiskusi.clicked.connect(self.gotoForumDiskusi)
@@ -38,9 +80,9 @@ class KatalogScreen(QDialog):
         katalogProduk = KatalogScreen()
         widget.addWidget(katalogProduk)
         widget.setCurrentIndex(widget.currentIndex()+1)
-    def gotoHomepage(self):
-        # homepage = HomepageScreen()
-        # widget.addWidget(homepage)
+    def gotoLogin(self):
+        login = LoginScreen()
+        widget.addWidget(login)
         widget.setCurrentIndex(widget.currentIndex()+1)
     def gotoEvent(self):
         # event = EventScreen()
@@ -219,9 +261,13 @@ class EditProdukScreen(QDialog):
         # redirect clicked button
         self.editButton.clicked.connect(self.editProdukfunction)
         self.H_KatalogProduk.clicked.connect(self.gotoKatalogProduk)
-        
+        self.H_Logout.clicked.connect(self.gotoLogin)
 
     # fungsi sidebar.
+    def gotoLogin(self):
+        login = LoginScreen()
+        widget.addWidget(login)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     def gotoKatalogProduk(self):
         katalogProduk = KatalogScreen()
         widget.addWidget(katalogProduk)
@@ -274,6 +320,19 @@ class AddProdukScreen(QDialog):
         # redirect clicked button
         self.unggahproduk.clicked.connect(self.addProdukFunction)
         self.H_KatalogProduk.clicked.connect(self.gotoKatalogProduk)
+        self.H_Homepage.clicked.connect(self.reload)
+        self.H_Logout.clicked.connect(self.gotoLogin)
+
+    # fungsi sidebar.
+    def gotoLogin(self):
+        login = LoginScreen()
+        widget.addWidget(login)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def reload(self):
+        reload = AddProdukScreen()
+        widget.addWidget(reload)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
     # fungsi sidebar
     def gotoKatalogProduk(self):
@@ -307,17 +366,20 @@ class AddProdukScreen(QDialog):
                     conn.commit()
                     conn.close()
                     QMessageBox.about(self,'Tambah Produk', 'Produk berhasil ditambah!')
+                    self.reload()
                 except:
                     QMessageBox.about(self, 'Tambah Produk', 'Produk gagal diupload. Pastikan semua data terisi!')
+                
         except:
             self.error.setText('Pastikan semua data terisi dan valid!')   
 
 
+
 # main
 app = QApplication(sys.argv)
-katalog = KatalogScreen()
+start = LoginScreen()
 widget = QtWidgets.QStackedWidget()
-widget.addWidget(katalog)
+widget.addWidget(start)
 widget.setFixedHeight(1080)
 widget.setFixedWidth(1920)
 widget.show()

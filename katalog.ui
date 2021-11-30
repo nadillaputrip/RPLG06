@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="widget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>1920</width>
+     <height>1080</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(244, 194, 194);</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-4</x>
+      <y>2</y>
+      <width>280</width>
+      <height>1080</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(255,255,255,255);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="logoLM">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>40</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/logo/images/logo.jpeg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="searchButton">
+    <property name="geometry">
+     <rect>
+      <x>1320</x>
+      <y>30</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/logo/images/search.png);
+background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="H_Homepage">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>251</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Homepage</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="H_KatalogProduk">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>251</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Katalog Produk</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="H_Konten">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>251</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Blog/Konten</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="H_Event">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>251</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Event</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="H_ForumDiskusi">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>470</y>
+      <width>251</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Forum Diskusi</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="searchBar">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>20</y>
+      <width>551</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 15px;
+padding-bottom:4px;
+padding-left:10px;</string>
+    </property>
+    <property name="placeholderText">
+     <string>Search here</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="tambahproduk">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>170</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#tambahproduk{
+background-color:rgb(255,255,255,255);
+border:none;
+color:rgba(0,0,0,240);
+border-radius:10px;
+}
+
+
+QPushButton#tambahproduk:hover{
+background-color:rgb(255,165,0,255)
+}
+
+QPushButton#tambahproduk:pressed{
+padding-left: 2px;
+padding-top: 2px;
+background-color:rgba(0,165,0,255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Tambah Produk Baru</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tabelProduk">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>240</y>
+      <width>681</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <column>
+     <property name="text">
+      <string>idProduk</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>namaProduk</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>batch</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>kategori</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>harga</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>quantity</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>berat</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>deskripsi</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>link</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>240</y>
+      <width>240</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255,255,255,255);
+border-radius:15px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>260</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(0,0,0,0);</string>
+    </property>
+    <property name="text">
+     <string>CRUD Data</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="editButton">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>370</y>
+      <width>95</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#editButton{
+background-color:rgb(187,187,187,255);
+border:none;
+color:rgba(0,0,0,240);
+border-radius:10px;
+}
+
+
+QPushButton#editButton:hover{
+background-color:rgb(244,194,194,255)
+}
+
+QPushButton#editButton:pressed{
+padding-left: 2px;
+padding-top: 2px;
+background-color:rgba(0,165,0,255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Edit</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="hapusButton">
+    <property name="geometry">
+     <rect>
+      <x>525</x>
+      <y>370</y>
+      <width>95</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#hapusButton{
+background-color:rgb(187,187,187,255);
+border:none;
+color:rgba(0,0,0,240);
+border-radius:10px;
+}
+
+
+QPushButton#hapusButton:hover{
+background-color:rgb(244,194,194,255)
+}
+
+QPushButton#hapusButton:pressed{
+padding-left: 2px;
+padding-top: 2px;
+background-color:rgba(0,165,0,255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Hapus</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="error">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>210</y>
+      <width>581</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(0,0,0,0);
+color: red;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reloadButton">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>130</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#reloadButton{
+background-color:rgb(255,255,255,255);
+border:none;
+color:rgba(0,0,0,240);
+border-radius:10px;
+}
+
+
+QPushButton#reloadButton:hover{
+background-color:rgb(255,165,0,255)
+}
+
+QPushButton#reloadButton:pressed{
+padding-left: 2px;
+padding-top: 2px;
+background-color:rgba(0,165,0,255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Reload</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inputidProduk">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>320</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0,0,0,25);
+border-radius: 10px;
+padding-bottom:4px;
+padding-left:10px;
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Kategori_2">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>290</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(0,0,0,0);</string>
+    </property>
+    <property name="text">
+     <string>id Produk</string>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>logoLM</zorder>
+   <zorder>H_Homepage</zorder>
+   <zorder>H_KatalogProduk</zorder>
+   <zorder>H_Konten</zorder>
+   <zorder>H_Event</zorder>
+   <zorder>H_ForumDiskusi</zorder>
+   <zorder>searchBar</zorder>
+   <zorder>searchButton</zorder>
+   <zorder>tambahproduk</zorder>
+   <zorder>tabelProduk</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_5</zorder>
+   <zorder>editButton</zorder>
+   <zorder>hapusButton</zorder>
+   <zorder>error</zorder>
+   <zorder>reloadButton</zorder>
+   <zorder>inputidProduk</zorder>
+   <zorder>Kategori_2</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="header image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
